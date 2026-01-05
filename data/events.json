@@ -1,0 +1,70 @@
+{
+  "events": [
+    {
+      "id": "ysk-2026-summer",
+      "group": "yashika",
+      "title": "Summer Taiko Festival",
+      "date": "2026-07-15",
+      "time": "19:00",
+      "venue": "Tokyo Cultural Hall",
+      "location": "Tokyo, Japan",
+      "description": "Join us for an evening of powerful rhythms and traditional performances.",
+      "ticketLink": "https://example.com/tickets/yashika-summer-2026",
+      "price": "¥3,000",
+      "status": "upcoming"
+    },
+    {
+      "id": "ysk-2026-workshop",
+      "group": "yashika",
+      "title": "Beginner Taiko Workshop",
+      "date": "2026-08-05",
+      "time": "14:00",
+      "venue": "Community Center",
+      "location": "Osaka, Japan",
+      "description": "Learn the basics of taiko drumming with Yashika instructors.",
+      "ticketLink": "https://example.com/tickets/yashika-workshop",
+      "price": "Free",
+      "status": "upcoming"
+    },
+    {
+      "id": "ryuu-2026-dragon",
+      "group": "ryuu",
+      "title": "Dragon's Heartbeat Concert",
+      "date": "2026-08-20",
+      "time": "18:30",
+      "venue": "Osaka Arena",
+      "location": "Osaka, Japan",
+      "description": "Experience the raw power and spiritual depth of Ryuu's signature performance.",
+      "ticketLink": "https://example.com/tickets/ryuu-dragon-2026",
+      "price": "¥3,500",
+      "status": "upcoming"
+    },
+    {
+      "id": "ryuu-2026-autumn",
+      "group": "ryuu",
+      "title": "Autumn Celebration",
+      "date": "2026-09-10",
+      "time": "17:00",
+      "venue": "Kyoto Temple Grounds",
+      "location": "Kyoto, Japan",
+      "description": "Traditional outdoor performance celebrating the autumn season.",
+      "ticketLink": "https://example.com/tickets/ryuu-autumn",
+      "price": "¥2,500",
+      "status": "upcoming"
+    },
+    {
+      "id": "ysk-2026-spring",
+      "group": "yashika",
+      "title": "Spring Showcase",
+      "date": "2026-03-20",
+      "time": "19:00",
+      "venue": "National Theatre",
+      "location": "Tokyo, Japan",
+      "description": "A spectacular showcase of traditional and contemporary taiko.",
+      "ticketLink": "https://example.com/tickets/yashika-spring",
+      "price": "¥4,000",
+      "status": "past"
+    }
+  ]
+}
+
