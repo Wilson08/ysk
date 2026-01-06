@@ -1,26 +1,20 @@
-FROM node:22-alpine AS development-dependencies-env
+FROM node:22-alpine AS base
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci
 
-FROM node:22-alpine AS production-dependencies-env
-WORKDIR /app
+FROM base AS dependencies
 COPY package.json package-lock.json ./
-RUN npm ci --omit=dev
+RUN npm install --no-audit --no-fund --prefer-offline
 
-FROM node:22-alpine AS build-env
-WORKDIR /app
-COPY . ./
-COPY --from=development-dependencies-env /app/node_modules ./node_modules
+FROM base AS builder
+COPY --from=dependencies /app/node_modules ./node_modules
+COPY . .
 RUN npm run build
 
-FROM node:22-alpine
+FROM base AS production
 ENV NODE_ENV=production
-WORKDIR /app
 COPY package.json package-lock.json ./
-COPY --from=production-dependencies-env /app/node_modules ./node_modules
-COPY --from=build-env /app/build ./build
+RUN npm install --omit=dev --no-audit --no-fund --prefer-offline
+COPY --from=builder /app/build ./build
 EXPOSE 3000
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:3000', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
 CMD ["npm", "run", "start"]
