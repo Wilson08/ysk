@@ -1,0 +1,10 @@
+{
+  "dockerCompose": false,
+  "dockerfile": "Dockerfile",
+  "dockerfilePath": ".",
+  "buildCommand": "",
+  "baseDirectory": ".",
+  "publishDirectory": "",
+  "port": 3000
+}
+
